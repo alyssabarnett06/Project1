@@ -184,9 +184,8 @@ $(document).ready(function() {
                     // Appends all of the info to the page
                     var newP = $("<p id=" + id + ">");
                          $("#eventResult").append(newP);
-                             $("#" + id).append("<br>" + month + " " + day + "<br>" +
+                             $("#" + id).append("<br>" + eventName + " " + month + " " + day + "<br>" +
                                                 time + "<br>" +
-                                                eventName + "<br>" +
                                                 priceRange + "<br>" +
                                                 genre + "<br>" +
                                                 description + "<br>" +
@@ -208,6 +207,7 @@ $(document).ready(function() {
     
     // *************************On-click event runs findEvents fucntion********************************
     $("#add-city").on("click", function(event) {
+        $("#eventResult").empty();
         event.preventDefault();
         findEvents();
     });
