@@ -31,7 +31,7 @@ body{
 }
 
 #eventResult{
-    background-color: white;
+    background-color: transparent;
     width: auto;
     height: auto;
     overflow: scroll;
