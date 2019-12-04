@@ -193,7 +193,7 @@ $(document).ready(function() {
                         moreP.append("<br>" + priceRange + "<br>" +
                                     genre + "<br>" +
                                     description + "<br>" +
-                                    "Interested in this event? visit " +`<a href=${url} target="_blank">here</a>`);
+                                    "Interested in this event? visit " +`<a href=${url} target="_blank">here</a>` + "<hr>");
                     $("#" + id).append(newP, readMore, moreP);     
                                         
                     if(eventName == null){
