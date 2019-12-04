@@ -193,7 +193,11 @@ $(document).ready(function() {
                         moreP.append("<br>" + priceRange + "<br>" +
                                     genre + "<br>" +
                                     description + "<br>" +
+<<<<<<< HEAD
                                     "Interested in this event? visit " +`<a href=${url} target="_blank">here</a>` + "<hr>");
+=======
+                                    "Interested in this event? Visit " +`<a href=${url} target="_blank">here</a>` + "<hr>");
+>>>>>>> 56d56dc060fd20f1918728a2af1d3c94f09be905
                     $("#" + id).append(newP, readMore, moreP);     
                                         
                     if(eventName == null){
@@ -201,9 +205,9 @@ $(document).ready(function() {
                     }       
                 }
             }  
-            $('.read-more-toggle').on('click', function() {
-                $(this).next('.read-more-content').toggleClass('hide');
-              }); 
+                $('.read-more-toggle').on('click', function() {
+                     $(this).next('.read-more-content').toggleClass('hide');
+                }); 
          }
        })
     }
