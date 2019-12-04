@@ -182,23 +182,33 @@ $(document).ready(function() {
                             priceRange = "Price Range: $" + priceRangeMin + "- $" + priceRangeMax;
                     }
                     // Appends all of the info to the page
-                    var newP = $("<p id=" + id + ">");
-                         $("#eventResult").append(newP);
-                             $("#" + id).append("<br>" + eventName + " " + month + " " + day + "<br>" +
-                                                time + "<br>" +
-                                                priceRange + "<br>" +
+                    var newDiv = $("<div id=" + id + ">");
+                         $("#eventResult").append(newDiv);
+                    var newP = $("<p>");
+                        newP.append("<br>" +"<strong>"+ eventName + "</strong>" + "<br> " + month + " " + day + " " +
+                                                time );
+                    var readMore = $("<button class='read-more-toggle'>");
+                        readMore.append(
+                                         "Read More");
+                    var moreP = $("<p class='read-more-content hide'>");
+                        moreP.append(          "<br>" + priceRange + "<br>" +
                                                 genre + "<br>" +
                                                 description + "<br>" +
                                                 "Interested in this event? visit " + url);
+                            $("#" + id).append(newP, readMore, moreP);     
                                         
                     if(eventName == null){
                         $("#eventResult").append("There are no upcoming events for this location");
                     }       
                 }
-            }   
+            }  
+            $('.read-more-toggle').on('click', function() {
+                $(this).next('.read-more-content').toggleClass('hide');
+              }); 
          }
        })
     }
+    
         // ***********************findEvents takes user input and passes it to renderEvents function**************************
     function findEvents(){
         var cityInput = $("#city-input").val().trim();
@@ -210,8 +220,10 @@ $(document).ready(function() {
         $("#eventResult").empty();
         event.preventDefault();
         findEvents();
+        
     });
     
     });
+    
         
     

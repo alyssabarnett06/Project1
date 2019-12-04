@@ -68,4 +68,7 @@ p{
 .card .card-title{
     font-weight: bolder;
 }
+.hide {
+    display: none;
+  }
 
