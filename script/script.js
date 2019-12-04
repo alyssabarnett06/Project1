@@ -37,13 +37,17 @@ $(document).ready(function() {
                              date == thirdDay ||
                              date == fourthDay ||
                              date == fifthDay){
+                                 console.log(response);
     
                                 var fullDate = response._embedded.events[0].dates.start.localDate;
                                 var day = fullDate.slice(-2);
                                 var monthNum = fullDate.substring(5,7);
                                 var month;
+                                var noSpecificTime = response._embedded.events[i].dates.start.noSpecificTime;
+                                if(noSpecificTime == false){
                                 var fullTime = response._embedded.events[i].dates.start.localTime;
                                 var milTime = fullTime.substring(0,2);
+                                }
                                 var time;
                                 var eventName = response._embedded.events[i].name;
                                 var id = response._embedded.events[i].id;
@@ -169,6 +173,8 @@ $(document).ready(function() {
                     case "24": 
                         time = "12:00 AM";
                     break;
+                    default:
+                        time = "Time not available";
             }      
                     // Checks API to see if a description of the event exsists, if so, it displays it
                     if (response._embedded.events[i].promoter){
@@ -193,7 +199,7 @@ $(document).ready(function() {
                         moreP.append("<br>" + priceRange + "<br>" +
                                     genre + "<br>" +
                                     description + "<br>" +
-                                    "Interested in this event? Visit " +`<a href=${url} target="_blank">here</a>` + "<hr>");
+                                    "Interested in this event? visit " +`<a href=${url} target="_blank">here</a>` + "<hr>");
                     $("#" + id).append(newP, readMore, moreP);     
                                         
                     if(eventName == null){
