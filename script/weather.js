@@ -23,11 +23,12 @@ function getCityWeather(city) {
         .append(humidityElement)
         .append(windSpeed)
        // Empty the contents of the weatherResult div
-       //$("#weatherResult").empty();
+       
      });
    }
   // Event handler for user clicking the city button
   $("#add-city").on("click", function(event) {
+    $("#weatherResult").empty();
     // Preventing the button from trying to submit the form
     event.preventDefault();
     // Storing the artist name
