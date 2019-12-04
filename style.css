@@ -49,7 +49,7 @@ h4{
 
 }
 
-.weatherResult{
+#weatherResult{
     background-color: white;
     box-shadow: 2px 2px 5px grey;
 }
