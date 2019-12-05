@@ -50,7 +50,7 @@ h4{
 }
 
 #weatherResult{
-    background-color: white;
+    background-color: rgb(219, 219, 219);
     box-shadow: 2px 2px 5px grey;
 }
 
@@ -71,4 +71,14 @@ p{
 .hide {
     display: none;
   }
+  h6 {
+    font-size: 14px;
+}
+.fiveDayEl {
+    margin: auto;
+    width: 90%;
+    margin-right: 2%;
+    height: 30%;
+    padding: 5px;
+}
 
