@@ -39,7 +39,7 @@ $(document).ready(function() {
                              date == fifthDay){
                                  console.log(response);
     
-                                var fullDate = response._embedded.events[0].dates.start.localDate;
+                                var fullDate = response._embedded.events[i].dates.start.localDate;
                                 var day = fullDate.slice(-2);
                                 var monthNum = fullDate.substring(5,7);
                                 var month;
