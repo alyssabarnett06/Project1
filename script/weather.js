@@ -17,7 +17,7 @@ function getCityWeather(city) {
     var iconCode = weather.icon;
     var iconURL = "http://openweathermap.org/img/w/" + iconCode + ".png";
     var iconElement = $("<img>").attr("src", iconURL)
-    var temperature = $("<p>").text("Temperature: " + listItem.main.temp + " °F");
+    var temperature = $("<p>").text("Temperature: " + kelvinToFahr(listItem.main.temp).toFixed(1) + " °F");
     var humidityElement = $("<p>").text("Humidity: " + listItem.main.humidity + "%");
     var windSpeed = $("<p>").text("Wind Speed: " + listItem.wind.speed + " mph")
     
